@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonia Mandal | AI & Medical Proofreading</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+}
+
+/* Navbar */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
+  position:sticky; top:0;
+}
+.nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:white;
+}
+
+/* Hero */
+.hero{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:50px;
+  padding:80px 20px;
+}
+.hero img{
+  width:260px;
+  border-radius:50%;
+  box-shadow:0 0 30px rgba(0,212,255,0.6);
+}
+.hero-text{
+  max-width:500px;
+}
+.hero-text h1{font-size:40px;}
+.highlight{color:#00d4ff;}
+.cta{
+  margin-top:20px;
+}
+.btn{
+  display:inline-block;
+  margin:10px 10px 0 0;
+  padding:10px 16px;
+  background:#00d4ff;
+  color:black;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* Sections */
+.section{padding:60px 40px;}
+.section h2{
+  margin-bottom:20px;
+  border-bottom:2px solid #00d4ff;
+  display:inline-block;
+}
+
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.card{
+  padding:20px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 20px rgba(0,212,255,0.4);
+}
+
+/* Modal */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.9);
+  justify-content:center;
+  align-items:center;
+}
+.modal iframe{
+  width:80%;height:80%;
+}
+.close{
+  position:absolute;
+  top:20px;right:30px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="nav">
+  <h2>Sonia Mandal</h2>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <img src="sonia.png">
+  <div class="hero-text">
+    <h1>I help businesses improve <span class="highlight">AI outputs & medical content accuracy</span></h1>
+    <p>15+ years in medical proofreading + now specializing in AI workflows, prompt engineering & content quality.</p>
+    
+    <div class="cta">
+      <a class="btn" href="mailto:mysteriouslife28@gmail.com">Hire Me</a>
+      <a class="btn" href="https://wa.me/919867363157" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<div class="section" id="services">
+  <h2>Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Medical Proofreading</h3>
+      <p>Accurate, compliant, and high-quality clinical documentation review.</p>
+    </div>
+    <div class="card">
+      <h3>AI Content Review</h3>
+      <p>Improve AI-generated outputs for accuracy, tone, and clarity.</p>
+    </div>
+    <div class="card">
+      <h3>Prompt Engineering</h3>
+      <p>Design prompts that produce reliable, consistent AI results.</p>
+    </div>
+    <div class="card">
+      <h3>Virtual Assistant (AI)</h3>
+      <p>Automation, research, and AI-powered workflow support.</p>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<div class="section" id="about">
+  <h2>About Me</h2>
+  <p>
+    I combine a science background (M.Sc. Microbiology) with 15+ years of precision documentation work.
+    Now transitioning into AI, bringing strong attention to detail, structured thinking, and quality control into AI workflows.
+  </p>
+</div>
+
+<!-- Skills -->
+<div class="section" id="skills">
+  <h2>Skills</h2>
+  <div class="cards">
+    <div class="card">Medical Terminology</div>
+    <div class="card">Prompt Engineering</div>
+    <div class="card">AI Tools</div>
+    <div class="card">Quality Assurance</div>
+    <div class="card">Automation</div>
+  </div>
+</div>
+
+<!-- Certificates -->
+<div class="section" id="certificates">
+  <h2>Certificates</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Medical Transcription</h3>
+      <a class="btn" onclick="openModal('cert1.pdf')">View</a>
+    </div>
+    <div class="card">
+      <h3>Bioinformatics</h3>
+      <a class="btn" onclick="openModal('cert2.pdf')">View</a>
+    </div>
+    <div class="card">
+      <h3>AI Course</h3>
+      <a class="btn" onclick="openModal('cert3.pdf')">View</a>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<div class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email: mysteriouslife28@gmail.com</p>
+  <p>Available for freelance & remote work</p>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <iframe id="frame"></iframe>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>© 2026 Sonia Mandal | Available for Freelance Work</p>
+</div>
+
+<script>
+function openModal(file){
+  document.getElementById("modal").style.display="flex";
+  document.getElementById("frame").src=file;
+}
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+}
+</script>
+
+</body>
+</html>
